@@ -17,10 +17,7 @@ function Pokemon( {filter}) {
       setFilteredPokemons(json.pokemon)
     };
     fetchData();
-    
   }, []);
-
-
 
   /*
     Tratando valor do filtro
