@@ -107,9 +107,7 @@ const PokeImageContainer = styled.div `
   justify-content: center;
   padding: 5px;
 
-  img {
-    width: 100%;
-  }
+ 
 `
 
 const PokeTextContainer = styled.div `
