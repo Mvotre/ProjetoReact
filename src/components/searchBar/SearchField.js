@@ -53,4 +53,9 @@ const Button = styled.button`
   font-size: 17px;
   align-items: center;
   padding: 0 15px;
+
+  :hover {
+    background-color: #e88d1e;
+    cursor: pointer;
+  }
 `
