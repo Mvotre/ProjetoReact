@@ -68,8 +68,15 @@ function Pokemon( {filter}) {
     }
   }
 
+  const filterResults = (resultado) => {
+    if(resultado.length == 0 && filterValue){
+      return (<ErrorMessage> Nenhum resultado encontrado </ErrorMessage>)
+    }
+  }
+
   return (
     <>
+      {filterResults(filteredPokemons)}
       { filteredPokemons.map( el => ( 
         <SinglePokemon key={el.id}>
           <PokeImageContainer>
@@ -98,6 +105,12 @@ const SinglePokemon = styled.div`
   margin: 30px 5px 0 10px;
 `
 
+const ErrorMessage = styled.p`
+  border: 1px solid red;
+  padding: 10px 20px;
+  text-align: center;
+`
+
 const PokeImageContainer = styled.div `
   background-color: #d9d9d9;
   border-radius: 5px;
@@ -106,7 +119,6 @@ const PokeImageContainer = styled.div `
   align-items: center;
   justify-content: center;
   padding: 5px;
-
  
 `
 
